@@ -70,9 +70,10 @@ body {
     padding: 1vw 2vw;
 
     position: fixed;
-    z-index: 1;
-    display: flex;
     bottom: 0;
+    z-index: 9999999;
+    display: flex;
+   
     justify-content: space-between;
 
 }
@@ -84,7 +85,7 @@ body {
 #gra {
     width: 100px;
     height: 10px;
-    background-color: rgb(255, 0, 0);
+    /* background-color: rgb(255, 0, 0); */
     display: flex;
 }
 
@@ -100,7 +101,7 @@ body {
 #d4,
 #d5,
 #d6 {
-    width: 1.4vw;
+    width: 8vw;
     height: 100%;
 }
 
@@ -134,7 +135,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 11;
+    z-index: 9;
     font-size: 1.8vw;
 }
 
@@ -236,30 +237,34 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-
+  overflow: hidden;
 }
 
 #second #sTop {
     width: 100%;
     height: 65%;
-    position: relative;
-    overflow: hidden;
+    position: absolute;
+  
     /* background-color: rgb(201, 125, 10); */
 }
 #sTop h1{
     position: absolute;
+    font-stretch: 100%;
     font-family: Gilroy;
-    
-    bottom:0%;
-    left: 100%;
-  
-    font-size: 18vw;
+    color: #ffffffb6;
+    bottom:0;
+    left: 150%;
+    z-index: 9999;
+  font-size: 25vw;
 }
 #second #sBtm {
+    border-top: 1px solid black;
     width: 100%;
     height: 35%;
-    position: relative;
-    background-color: slategray;
+    bottom: 0;
+    position: absolute;
+    z-index: 999;
+    background-color: #fff;
 }
 
 .sTop-circle {
@@ -267,20 +272,20 @@ body {
     height: 150px;
     position: absolute;
     z-index: 222;
-    top: 50%;
-
+   top: 170%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
 }
 
 #pu {
-    left: 45%;
-    background-color: red;
+    left: 50%;
+    background-color: #7ac9af;
 }
 
 #pi {
     left: 55%;
-    background-color: greenyellow;
+    background:linear-gradient(to right ,greenyellow,greenyellow) ;
+    
 }
 
 #sBtm p {
@@ -293,7 +298,7 @@ body {
     font-size: 4vw;
 }
 #sBtm p:nth-child(1){
-    display: none;
+    opacity:0;
 }
 
 
@@ -384,4 +389,83 @@ body {
 
     position: absolute;
     font-size: .8vw;
+}
+@media (max-width:500px) {
+    #nav {
+    
+        padding: 4vw 4vw;
+       
+    }
+    #nRight h4 {
+        font-size: 5vw;
+       
+    }
+    #center {
+        width: 77vw;
+        font-size: 6vw;
+    }
+    #center #cimg {
+       
+        height:180px;
+    }
+    #home img {
+    
+        object-position: right;
+       
+    }
+    #bnav {
+        width: 97%;
+        padding: 0vw 1vw;
+    }
+    #smCircle {
+        width: 75vw;
+        height: 75vw;
+    }
+       #home #circle {
+      
+        width: 120vw;
+        height: 120vw;
+  }
+    #greenp {
+        width: 55vw;
+        height: 55vw;
+      }
+      #greenp #inner {
+       margin-top: 68px;
+        margin-left: -51px;
+        padding: 0 1.9vw;
+        width: 45%;
+      font-size: 4vw;
+    }
+    #greenp #inner-btm {
+       padding: 0px 1vw;
+     font-size: 4vw;
+       }
+       #overlay h1 {
+        bottom: 12vw;
+        font-size: 23vw;
+    }
+    #gola {
+        width: 20vw;
+        height: 20vw;
+    }
+    #overlay h2 {
+        
+        font-size: 15vw;
+    }
+    #sTop h1 {
+        /* color: red; */
+        font-size: 50vw;
+    }
+    #sBtm p {
+        top: 50%;
+        line-height: 6.5vw;
+        width: 80%;
+        font-size: 8vw;
+    }
+    #second #sBtm {
+       
+        height: 28%;
+       
+    }
 }
